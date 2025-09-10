@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-const asset = (path) => `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, "")}`;
+const ASSET_V = "2025-09-10-1"; // incrémente quand tu remplaces un PDF/image
+const asset = (path) =>
+  `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, "")}?v=${ASSET_V}`;
 
 /* =====================================================
    Multilingual Portfolio — FR / EN switch without mixups
