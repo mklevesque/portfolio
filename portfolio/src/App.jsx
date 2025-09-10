@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const ASSET_V = "2025-09-10-1"; // incrémente quand tu remplaces un PDF/image
+const ASSET_V = "2025-09-10-2"; // versionning
 const asset = (path) =>
   `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, "")}?v=${ASSET_V}`;
 
