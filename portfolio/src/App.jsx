@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const asset = (path) => `${import.meta.env.BASE_URL}${String(path).replace(/^\/+/, "")}`;
 
 /* =====================================================
    Multilingual Portfolio — FR / EN switch without mixups
@@ -18,9 +19,11 @@ const PERSON = {
   email: "mxchaellevesque@gmail.com",
   phone: "06 12 47 47 02",
   linkedin: "https://www.linkedin.com/in/mxchaellevesque/",
-  photo: `${import.meta.env.BASE_URL}michael.jpg`,
-  resumeFr: `${import.meta.env.BASE_URL}docs/FR - Data Analyst.pdf`,
-  resumeEn: `${import.meta.env.BASE_URL}docs/EN - Data Analyst.pdf`,
+
+  // ✅ chemins robustes pour GitHub Pages
+  photo: asset("michael.jpg"),
+  resumeFr: asset("docs/cv_michael_fr.pdf"),
+  resumeEn: asset("docs/cv_michael_en.pdf"),
 };
 
 // ---- All copy is strictly separated by language ----
