@@ -18,8 +18,9 @@ const PERSON = {
   email: "mxchaellevesque@gmail.com",
   phone: "06 12 47 47 02",
   linkedin: "https://www.linkedin.com/in/mxchaellevesque/",
-  resumeFr: "/docs/FR - Data Analyst.pdf",
-  resumeEn: "/docs/EN - Data Analyst.pdf",
+  photo: `${import.meta.env.BASE_URL}michael.jpg`,
+  resumeFr: `${import.meta.env.BASE_URL}docs/FR - Data Analyst.pdf`,
+  resumeEn: `${import.meta.env.BASE_URL}docs/EN - Data Analyst.pdf`,
 };
 
 // ---- All copy is strictly separated by language ----
@@ -268,7 +269,7 @@ export default function Portfolio() {
             <div className="md:col-span-1 flex justify-center">
                 <div className="relative">
                 <img
-                    src="/michael.jpg"
+                    src={PERSON.photo}
                     alt={PERSON.name}
                     className="w-48 h-48 rounded-full object-cover border-4 border-slate-200 shadow-xl dark:border-slate-700"
                 />
